@@ -19,5 +19,5 @@ if __name__ == "__main__":
                 余额字典[roomID] = 电费余额
                 生成rss.生成rss文件(roomID, 电费余额)
             time.sleep(0.1)
-        time.sleep(10)
+        time.sleep(600)
 
