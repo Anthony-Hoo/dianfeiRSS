@@ -11,6 +11,7 @@ if __name__ == "__main__":
         "B219" : "",
         "B309" : ""
     }
+    电费余额 = 0
     while True:
         for roomID in rooms:
             电费余额 = 查电费.获取电费json(roomID, 电费余额)
