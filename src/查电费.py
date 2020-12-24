@@ -17,12 +17,17 @@ header = {
     "X-Requested-With": "XMLHttpRequest"
 }
 
-def 获取电费json(roomID):
+def 获取电费json(roomID, 前一次电费):
     url = "http://yktwd.csust.edu.cn:8988/web/Common/Tsm.html"
     data = "jsondata=%7B+%22query_elec_roominfo%22%3A+%7B+%22aid%22%3A%220030000000002501%22%2C+%22account%22%3A+%22227622%22%2C%22room%22%3A+%7B+%22roomid%22%3A+%22" + roomID + "%22%2C+%22room%22%3A+%22" + roomID + "%22+%7D%2C++%22floor%22%3A+%7B+%22floorid%22%3A+%22%22%2C+%22floor%22%3A+%22%22+%7D%2C+%22area%22%3A+%7B+%22area%22%3A+%22%E4%BA%91%E5%A1%98%E6%A0%A1%E5%8C%BA%22%2C+%22areaname%22%3A+%22%E4%BA%91%E5%A1%98%E6%A0%A1%E5%8C%BA%22+%7D%2C+%22building%22%3A+%7B+%22buildingid%22%3A+%22106%22%2C+%22building%22%3A+%22%E8%A1%8C%E5%81%A5%E8%BD%A92%E6%A0%8BB%E5%8C%BA%22+%7D+%7D+%7D&funname=synjones.onecard.query.elec.roominfo&json=true"
+    
     r = requests.post(headers = header, url = url, data = data)
-    # print(r.text)
-    剩余电费 = str(re.findall(re.compile(r"\" 房间剩余电量(.*?)\","), r.text)[0])
+    print(r.text)
+    try:
+        剩余电费 = str(re.findall(re.compile(r"\" 房间剩余电量(.*?)\","), r.text)[0])
+    except:
+        return 前一次电费
+    
     return 剩余电费
 
 

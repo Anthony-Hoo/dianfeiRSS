@@ -13,7 +13,7 @@ if __name__ == "__main__":
     }
     while True:
         for roomID in rooms:
-            电费余额 = 查电费.获取电费json(roomID)
+            电费余额 = 查电费.获取电费json(roomID, 电费余额)
             if 余额字典[roomID] != 电费余额:
                 余额字典[roomID] = 电费余额
                 生成rss.生成rss文件(roomID, 电费余额)
