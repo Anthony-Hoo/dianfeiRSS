@@ -351,4 +351,5 @@ MigrationBackup/
 # files in /xml
 
 /xml/*
-!xml/index.html
+!/xml/index.html
+xml/*.xml
