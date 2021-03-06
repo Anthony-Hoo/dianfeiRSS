@@ -5,3 +5,5 @@
 自己看代码（bushi）
 ## 有客户端吗？
 建议配合tg上 @hugefiver 的rssBOT（@rss_cn_bot），每五分钟同步一次数据（（
+## 项目实例呢？
+在这里：https://rss.imirai.xyz/
