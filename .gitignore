@@ -354,3 +354,6 @@ MigrationBackup/
 !/xml/README.md
 xml/*.xml
 .vscode/
+
+# Python virtual env
+venv/ 
