@@ -351,6 +351,6 @@ MigrationBackup/
 # files in /xml
 
 /xml/*
-!/xml/index.html
+!/xml/README.md
 xml/*.xml
 .vscode/
