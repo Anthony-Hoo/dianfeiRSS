@@ -4,11 +4,9 @@ import time
 
 if __name__ == "__main__":
 
-    rooms = ["B101", "B102", "B219", "B309", "B524"]
+    房间们 = ["B101", "B102", "B219", "B309", "B524"]
 
-    余额字典 = {}
-    for roomID in rooms:
-        余额字典[roomID] = 0
+    余额字典 = dict.fromkeys(房间们, 0)
 
     while True:
         for roomID in rooms:
