@@ -4,7 +4,7 @@ import time
 
 if __name__ == "__main__":
 
-    rooms = ["B101", "B102", "B219", "B309", "B524"]
+    rooms = ["B101", "B102", "B219", "B309", "B524", "B424"]
 
     余额字典 = {}
     for roomID in rooms:
