@@ -353,3 +353,4 @@ MigrationBackup/
 /xml/*
 !/xml/index.html
 xml/*.xml
+.vscode/

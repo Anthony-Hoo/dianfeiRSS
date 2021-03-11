@@ -26,10 +26,10 @@ def 获取电费json(roomID, 前一次电费):
     
         剩余电费 = str(re.findall(re.compile(r"\" 房间剩余电量(.*?)\","), r.text)[0])
         if float(剩余电费) > 5 and float(剩余电费) < float(前一次电费) and float(剩余电费) > float(前一次电费)-1:
-            return 前一次电费
+            return float(前一次电费)
     except:
-        return 前一次电费
+        return float(前一次电费)
     
-    return 剩余电费
+    return float(剩余电费)
 
 
