@@ -22,7 +22,7 @@ class 文件操作:
 class 迪克森(UserDict):
     @classmethod
     def 来自关键(我们类, 迭代器, 值=虚空):
-        return 我们类.fromkeys(迭代器, 虚空)
+        return 我们类.fromkeys(迭代器, 值)
 
     def 拿(自己, 键):
         return 自己[键]
